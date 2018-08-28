@@ -1,6 +1,6 @@
 export default {
 
-  apiEndpoint: 'https://josehpleasscomaro.prismic.io/api/v2',
+  apiEndpoint: 'https://aroarchive.prismic.io/api/v2',
 
   // -- Access token if the Master is not open
   // accessToken: 'xxxxxx',

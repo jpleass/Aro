@@ -3,18 +3,20 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Redirect,
+  // Redirect,
 } from 'react-router-dom';
 import Preview from './Preview';
 import Help from './Help';
 import NotFound from './NotFound';
 import './App.css';
+import Home from './Home';
 import Page from './Page';
 
 const App = (props) => (
   <Router>
     <Switch>
-      <Redirect exact from="/" to="/help"/>
+
+      <Route exact path="/" render={routeProps => <Home {...routeProps} prismicCtx={props.prismicCtx} />} />
       <Route exact path="/help" component={Help} />
       <Route exact path="/preview" render={routeProps => <Preview {...routeProps} prismicCtx={props.prismicCtx} />} />
       <Route exact path="/page/:uid" render={routeProps => <Page {...routeProps} prismicCtx={props.prismicCtx} />} />
