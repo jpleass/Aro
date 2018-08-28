@@ -46,7 +46,7 @@ export default class Home extends React.Component {
       console.log(document);
       return (
         <main>
-          <Plyr type="vimeo" controls='' videoId="255177390"/>
+          <Plyr type="vimeo" controls='' videoId="286364652"/>
           <h1>{PrismicReact.RichText.asText(document.data.title)}</h1>
           {PrismicReact.RichText.render(document.data.description, this.props.prismicCtx.linkResolver)}
         </main>
